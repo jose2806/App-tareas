@@ -8,22 +8,24 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js (si es necesario)
-        uses: actions/setup-node@v4  
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Asegura que usa Node.js 20
+          node-version: '20'
 
-      - name: Build project (si es necesario)
-        run: |
-          npm install
-          npm run build  # Cambia esto según tu configuración de build
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4  # Actualizado a la versión más reciente
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src  # Publica desde la carpeta src
+          publish_dir: ./build
