@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # O la rama que estés usando
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js (si es una app Node.js)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Cambia según la versión que necesites
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build  # Cambia este comando según tu proyecto
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src  # Cambia este directorio según donde esté el contenido que quieras desplegar
