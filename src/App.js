@@ -3,7 +3,7 @@ import Logo from './imagenes/logo.PNG'
 import ListaDeTareas from './componentes/ListaDeTareas';
 function App() {
   return (
-    <div className="Aplicacion-tareas">
+    <div className="aplicacion-tareas">
      <div className='freecodecamp-logo-contenedor'>
       <img src={Logo} className='freecodecamp-logo' 
       alt='Logo de freecodecamp'/>
