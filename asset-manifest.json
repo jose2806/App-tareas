@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/App-tareas/static/css/main.3001ef96.css",
-    "main.js": "/App-tareas/static/js/main.e0bdb4f5.js",
+    "main.js": "/App-tareas/static/js/main.157088ad.js",
     "static/media/logo.PNG": "/App-tareas/static/media/logo.660f6bd0eb8815d71f5d.PNG",
     "index.html": "/App-tareas/index.html",
     "main.3001ef96.css.map": "/App-tareas/static/css/main.3001ef96.css.map",
-    "main.e0bdb4f5.js.map": "/App-tareas/static/js/main.e0bdb4f5.js.map"
+    "main.157088ad.js.map": "/App-tareas/static/js/main.157088ad.js.map"
   },
   "entrypoints": [
     "static/css/main.3001ef96.css",
-    "static/js/main.e0bdb4f5.js"
+    "static/js/main.157088ad.js"
   ]
 }
